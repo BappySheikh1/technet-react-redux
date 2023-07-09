@@ -10,13 +10,11 @@ interface IProps {
 }
 
 export default function ProductCard({ product }: IProps) {
-
-
-  const disPatch = useAppDispatch()
-
+  const disPatch = useAppDispatch();
 
   const handleAddProduct = (product: IProduct) => {
-    disPatch(addToCart(product))
+    disPatch(addToCart(product));
+
     toast({
       description: 'Product Added',
     });
